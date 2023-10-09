@@ -1,7 +1,7 @@
 from uagents import Agent,Context,Model
 import requests  
   
-def get_temprature( city_id):  
+def get_temperature( city_id):  
     api_url = "http://api.weatherstack.com/current"  
     params = {  
         "query": city_id,
@@ -17,8 +17,8 @@ red = Agent(name="Red",seed="red phrase")
 
 @red.on_interval(period=2.0)
 async def period_func(ctx:Context):
-    cur_temp=get_temprature('New Delhi')
-    if(cur_temp<ctx.storage.get("min_range") or cur_temp>ctx.storage.get("max_range")):
+    cur_temp=get_temperature('New Delhi')
+    if(cur_temp < ctx.storage.get("min_range") or cur_temp > ctx.storage.get("max_range")):
         ctx.logger.info(f"current temprature [{cur_temp}] is out of range [{ctx.storage.get('min_range')} , {ctx.storage.get('max_range')}]")
 
 if __name__ == "__main__":
