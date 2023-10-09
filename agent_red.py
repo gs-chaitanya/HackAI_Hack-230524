@@ -1,8 +1,13 @@
 from uagents import Agent,Context,Model
 import requests  
+import os
+import dotenv
   
 def get_temperature( city_id):  
-    api_url = "http://api.weatherstack.com/current"  
+    # api_url = "http://api.weatherstack.com/current"  
+    dotenv.load_dotenv()
+    
+    api_url = os.getenv("API_KEY")
     params = {  
         "query": city_id,
         "access_key": "2c5669669f00e46e95e61b5ae18b4efa"  
