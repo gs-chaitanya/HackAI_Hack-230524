@@ -19,7 +19,7 @@ if __name__ == "__main__":
     minT, maxT, CITY = Get_Bot_Params() # Take input from user
 
     if(CITY != -1):
-        bureau = Bureau(endpoint=["http://127.0.0.1:42069/submit"], port=420) # Create a bereau to manage bot interaction
+        bureau = Bureau(endpoint=["http://127.0.0.1:42069/submit"], port=22095) # Create a bereau to manage bot interaction
         
         print(f"Activating {temperature_bot.name}")
         bureau.add(temperature_bot) 
