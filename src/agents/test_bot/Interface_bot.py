@@ -14,7 +14,6 @@ range then it sends an alert.
 load_dotenv()
 
 ACCESS_KEY = os.getenv('ACCESS_KEY')
-CITY_ID='New Delhi' # fetch from storage
 maxT = 0
 minT = 0
 TEMPERATURE_BOT_ADDRESS=os.getenv('TEMPERATURE_BOT_ADDRESS')
@@ -27,8 +26,7 @@ fund_agent_if_low(interface_bot.wallet.address())
 @interface_bot.on_interval(period=2.0)
 async def message_temperature_bot(ctx:Context):
     CITY_ID = ctx.storage.get('CITY')
-    await ctx.send(TEMPERATURE_BOT_ADDRESS,Message(message=CITY_ID)) # Send request to temperature bot
-    # ctx.logger.info("message sent!")
+    await ctx.send(TEMPERATURE_BOT_ADDRESS,Message(message=CITY_ID))
 
 @interface_bot.on_message(model=Message)
 async def send_alert(ctx:Context,sender:str,msg:Message):
