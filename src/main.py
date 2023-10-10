@@ -20,8 +20,8 @@ if __name__ == "__main__":
 
     if(CITY != -1):
         bureau = Bureau(endpoint=["http://127.0.0.1:42069/submit"], port=420) # Create a bereau to manage bot interaction
-        print(f"Activating {temperature_bot.name}")
         
+        print(f"Activating {temperature_bot.name}")
         bureau.add(temperature_bot) 
         print(f"Activating {interface_bot.name}")
         bureau.add(interface_bot) # Add both bots
