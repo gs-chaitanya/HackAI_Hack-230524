@@ -1,5 +1,5 @@
 {
-    "MinTemp": 40,
+    "MinTemp": 50,
     "MaxTemp": 100,
-    "CITY": "London"
+    "CITY": "New York"
 }
