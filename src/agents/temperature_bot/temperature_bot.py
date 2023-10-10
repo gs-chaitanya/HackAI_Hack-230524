@@ -32,13 +32,10 @@ async def send_address(ctx:Context):
 
 @temperature_bot.on_message(model=Message)
 async def handle_message(ctx: Context, sender: str, msg: Message):
-    
-
-
     temperature=get_temperature(msg.message)
     ctx.logger.info(f"recieved message : {msg.message}")
     await ctx.send(sender,Message(message=temperature))
-    ctx.logger.info("message sent!")
+
 
 if __name__=="__main__":
     temperature_bot.run()
