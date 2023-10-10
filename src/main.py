@@ -16,7 +16,7 @@ async def send_address(ctx:Context):
 
 if __name__ == "__main__":
 
-    maxT, minT, CITY = Get_Bot_Params()
+    minT, maxT, CITY = Get_Bot_Params()
 
     if(CITY != -1):
         bureau = Bureau(port=420)

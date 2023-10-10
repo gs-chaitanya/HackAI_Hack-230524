@@ -28,9 +28,9 @@ async def send_alert(ctx:Context,sender:str,msg:Message):
     minT = ctx.storage.get('MinTemp')
     maxT = ctx.storage.get('MaxTemp')
     if(recieved_temperature < minT):
-        ctx.logger.info(f"Too cold. Current temperature: {msg.message}")
+        ctx.logger.info(f"Too cold. Current temperature: {recieved_temperature}")
     elif(recieved_temperature > maxT):
-        ctx.logger.info(f"Too hot. Current temperature: {msg.message}")
+        ctx.logger.info(f"Too hot. Current temperature: {recieved_temperature}")
     
 
 
