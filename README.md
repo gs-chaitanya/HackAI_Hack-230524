@@ -1,7 +1,7 @@
 # Fahrenheit 451: A Temperature Alert Agent
 ## Team ID: HackAI_Hack-230524
 ### Project Description
-In this project, we use a decentralized model using the uAgents library by Fetch.AI.
+In this project, we use a two bot model using the uAgents library by Fetch.AI.
 
 We decided to choose part 1 of the PS, i.e. Temperature Alert Agent.
 We have utilized the weatherstack API to fetch the real-time temperature data of locations.
