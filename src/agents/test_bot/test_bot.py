@@ -30,9 +30,7 @@ async def send_alert(ctx:Context,sender:str,msg:Message):
         ctx.logger.info(f"Too hot. Current temperature: {msg.message}")
     
 
-    # put a function that checks if recieved_temperature is outside the range
 
-    # ctx.logger.info(f"recieved temperature : {msg.message}")
 
 if __name__=="__main__":
     CITY_ID = input("Enter City: ")
