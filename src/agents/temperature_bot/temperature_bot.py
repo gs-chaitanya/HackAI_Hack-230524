@@ -17,7 +17,6 @@ def get_temperature( city_id):
         "access_key":  ACCESS_KEY
     }
     response = requests.get(api_url, params=params)  
-    print(response.status_code)
     data = response.json() 
     temperature = data['current']['temperature']
     return temperature
