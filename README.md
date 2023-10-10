@@ -15,8 +15,8 @@ There are 2 bots:
 2. Install the required dependencies, use the command:
 `pip install -r requirements.txt`
 4. Set the ACCESS_KEY parameter in .env to be a valid weatherstack API key. 
-3. Run main.py to start the agents.
-`python main.py`
+3. Run src/main.py to start the agents.
+`python src/main.py`
 
 
 
